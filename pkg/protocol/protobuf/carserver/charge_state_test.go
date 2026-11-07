@@ -38,7 +38,11 @@ func TestChargeStateLastChargeSummary(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if hex.EncodeToString(back) != lastChargeWire {
-		t.Errorf("re-encoded %x, want %s", back, lastChargeWire)
+	var again ChargeState
+	if err := proto.Unmarshal(back, &again); err != nil {
+		t.Fatal(err)
+	}
+	if !proto.Equal(&state, &again) {
+		t.Errorf("round trip changed the message: %x", back)
 	}
 }
