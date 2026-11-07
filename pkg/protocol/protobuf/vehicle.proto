@@ -409,7 +409,7 @@ message ChargeState {
     oneof optional_last_charge_cost { float last_charge_cost = 183; }
     oneof optional_last_charge_currency { string last_charge_currency = 184; } // ISO 4217 code, e.g. "EUR"
     oneof optional_last_charge_price_per_kwh { float last_charge_price_per_kwh = 185; } // in last_charge_currency
-    oneof optional_last_charge_timestamp { google.protobuf.Timestamp last_charge_timestamp = 190; }
+    google.protobuf.Timestamp last_charge_timestamp = 190;
 }
 
 message ManagedChargingState {
