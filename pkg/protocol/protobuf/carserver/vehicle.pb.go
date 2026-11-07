@@ -3484,9 +3484,7 @@ type ChargeState struct {
 	//
 	//	*ChargeState_OutletMaxTimerMinutes
 	OptionalOutletMaxTimerMinutes isChargeState_OptionalOutletMaxTimerMinutes `protobuf_oneof:"optional_outlet_max_timer_minutes"`
-	// Summary of the most recent paid charging session, as shown in the Tesla app's
-	// "Last Charge" card. Observed over BLE on firmware 2026.38.3.1; the values only
-	// change after the next paid session.
+	// Most recent paid charging session.
 	//
 	// Types that are assignable to OptionalLastChargeCost:
 	//

@@ -7,7 +7,7 @@ import (
 	"google.golang.org/protobuf/proto"
 )
 
-// The four last-charge fields exactly as a Model 3 (firmware 2026.38.3.1) sent them over BLE.
+// Last-charge fields as received from a vehicle.
 const lastChargeWire = "bd0b3d0a8740c20b03455552cd0b295c8f3ef20b0608cbdcfbd006"
 
 func TestChargeStateLastChargeSummary(t *testing.T) {
