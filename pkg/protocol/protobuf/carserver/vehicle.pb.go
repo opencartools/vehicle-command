@@ -3484,7 +3484,7 @@ type ChargeState struct {
 	//
 	//	*ChargeState_OutletMaxTimerMinutes
 	OptionalOutletMaxTimerMinutes isChargeState_OptionalOutletMaxTimerMinutes `protobuf_oneof:"optional_outlet_max_timer_minutes"`
-	// Most recent paid charging session.
+	// Most recent paid super-charging session.
 	//
 	// Types that are assignable to OptionalLastChargeCost:
 	//
