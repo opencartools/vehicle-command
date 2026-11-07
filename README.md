@@ -5,6 +5,12 @@
 [![DockerHub Tags](https://img.shields.io/docker/v/tesla/vehicle-command?label=docker%20tags)](https://hub.docker.com/r/tesla/vehicle-command/tags)
 
 
+> **About this fork.** This is a fork of [teslamotors/vehicle-command](https://github.com/teslamotors/vehicle-command).
+> It adds fields that vehicles send but Tesla's protobufs do not define yet (so far the last paid charge's cost,
+> currency, price per kWh and time in `ChargeState`). The
+> [TeslaBatteryBLE](https://github.com/opencartools/TeslaBatteryBLE) app vendors its protos from this fork, at the
+> commit pinned in its `protocol/src/main/proto/TESLA_COMMIT`.
+
 Tesla vehicles now support a protocol that provides end-to-end command
 authentication. This Golang package uses the new protocol to control vehicle
 functions, such as climate control and charging.
